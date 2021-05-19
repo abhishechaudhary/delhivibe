@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signup</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+ /* .frm{
+   border: 1px solid black;
+   width: 300px;
+   margin: auto;
+   padding: auto;
+ } */
+
+ .div-wrapper {
+    height: 200px;
+    margin-top: 40px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+}
+ 
+.div-to-align {
+    width: 75%;
+    padding: 40px 20px;
+ 
+    /* .... */
+}
+
+</style>
+<body  class="h-100">
+  <div class="container h-100 " style=" margin-top: 100px;">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6" style="border: 1px solid aqua; padding: 20px;">
+            <!-- Form -->
+            <form id="signup-form" class="form-example" action="">
+                <h1 class="text-center">Sign Up</h1>
+                <hr>
+                <!-- Input fields -->
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control username" id="name1" value="" placeholder="Username..." name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control password" id="pass1" value="" placeholder="Password..." name="password">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control password" id="email" value="" placeholder="Email..." name="email">
+              </div>
+                <button type="submit" id="signup_btn" value="Login" class="btn btn-primary btn-customized">sign up</button>
+                <!-- End input fields -->
+                <!-- <p class="copyright">&copy; Bootstrap 4 "Align Center" tutorial by <a href="https://azmind.com">AZMIND</a>.</p> -->
+                <a href="userlogin.html" class="btn btn-primary ">Go to login</a>
+              </form>
+            <!-- Form end -->
+        </div>
+    </div>
+</div>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#signup-form").submit(function () {
+      var nm1 = $("#name1").val();
+      var ps1 = $("#pass1").val();
+      localStorage.setItem("n1", nm1);
+      localStorage.setItem("p1", ps1);
+
+    });
+
+
+
+  });
+</script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>logSign</title>
+</head>
+
+<body>
+  <form id="signup-form">
+    <input id="name1" type="text" placeholder="Username" value="" required>
+    <input id="pass1" type="password" placeholder="Password" value="" required>
+    <input id="signup_btn" type="submit" value="Signup">
+  </form>
+
+  
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#signup-form").submit(function () {
+        var nm1 = $("#name1").val();
+        var ps1 = $("#pass1").val();
+        localStorage.setItem("n1", nm1);
+        localStorage.setItem("p1", ps1);
+
+      });
+
+  
+
+    });
+  </script>
+</body>
+
+</html> -->
